@@ -1,5 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { DemoLoginForm } from "@/components/demo-login-form";
+import { DemoLoginForm } from "@/components/auth/demo-login-form";
 import type { AppLocale } from "@/i18n/routing";
 
 export default async function LoginPage({
