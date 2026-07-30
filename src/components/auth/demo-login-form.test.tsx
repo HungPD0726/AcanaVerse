@@ -15,26 +15,26 @@ describe("demo login form", () => {
       </NextIntlClientProvider>,
     );
 
-    const submit = screen.getByRole("button", { name: "Save demo account" });
+    const submit = screen.getByRole("button", { name: "Demo sign in" });
     fireEvent.click(submit);
 
     expect(
       screen.getByText("Enter a valid email address."),
     ).toBeInTheDocument();
     expect(
-      screen.getByText("Passphrase must be at least 12 characters."),
+      screen.getByText("Password must contain at least 12 characters."),
     ).toBeInTheDocument();
 
-    fireEvent.change(screen.getByLabelText("Email address"), {
+    fireEvent.change(screen.getByLabelText("Email"), {
       target: { value: "seeker@arcanaverse.app" },
     });
-    fireEvent.change(screen.getByLabelText("Demo passphrase"), {
+    fireEvent.change(screen.getByLabelText("Password"), {
       target: { value: "mystic-tarot-2026-key" },
     });
     fireEvent.click(submit);
 
     expect(await screen.findByRole("status")).toHaveTextContent(
-      "Demo account saved to this browser",
+      "You are signed in in demo mode.",
     );
   });
 });
