@@ -1,0 +1,15 @@
+import createNextIntlPlugin from "next-intl/plugin";
+import type { NextConfig } from "next";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
+
+const nextConfig: NextConfig = {
+  reactCompiler: true,
+  poweredByHeader: false,
+  allowedDevOrigins: ["127.0.0.1"],
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
+};
+
+export default withNextIntl(nextConfig);

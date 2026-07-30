@@ -1,0 +1,782 @@
+[
+  {
+    "slug": "the-fool",
+    "filename": "RWS Tarot 00 Fool.jpg",
+    "path": "/images/cards/the-fool.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_00_Fool.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-magician",
+    "filename": "RWS Tarot 01 Magician.jpg",
+    "path": "/images/cards/the-magician.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_01_Magician.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-high-priestess",
+    "filename": "RWS Tarot 02 High Priestess.jpg",
+    "path": "/images/cards/the-high-priestess.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_02_High_Priestess.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-empress",
+    "filename": "RWS Tarot 03 Empress.jpg",
+    "path": "/images/cards/the-empress.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_03_Empress.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-emperor",
+    "filename": "RWS Tarot 04 Emperor.jpg",
+    "path": "/images/cards/the-emperor.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_04_Emperor.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-hierophant",
+    "filename": "RWS Tarot 05 Hierophant.jpg",
+    "path": "/images/cards/the-hierophant.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_05_Hierophant.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-lovers",
+    "filename": "RWS Tarot 06 Lovers.jpg",
+    "path": "/images/cards/the-lovers.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_06_Lovers.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-chariot",
+    "filename": "RWS Tarot 07 Chariot.jpg",
+    "path": "/images/cards/the-chariot.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_07_Chariot.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "strength",
+    "filename": "RWS Tarot 08 Strength.jpg",
+    "path": "/images/cards/strength.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_08_Strength.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-hermit",
+    "filename": "RWS Tarot 09 Hermit.jpg",
+    "path": "/images/cards/the-hermit.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_09_Hermit.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wheel-of-fortune",
+    "filename": "RWS Tarot 10 Wheel of Fortune.jpg",
+    "path": "/images/cards/wheel-of-fortune.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_10_Wheel_of_Fortune.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "justice",
+    "filename": "RWS Tarot 11 Justice.jpg",
+    "path": "/images/cards/justice.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-hanged-man",
+    "filename": "RWS Tarot 12 Hanged Man.jpg",
+    "path": "/images/cards/the-hanged-man.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_12_Hanged_Man.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "death",
+    "filename": "RWS Tarot 13 Death.jpg",
+    "path": "/images/cards/death.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_13_Death.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "temperance",
+    "filename": "RWS Tarot 14 Temperance.jpg",
+    "path": "/images/cards/temperance.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_14_Temperance.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-devil",
+    "filename": "RWS Tarot 15 Devil.jpg",
+    "path": "/images/cards/the-devil.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_15_Devil.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-tower",
+    "filename": "RWS Tarot 16 Tower.jpg",
+    "path": "/images/cards/the-tower.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_16_Tower.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-star",
+    "filename": "RWS Tarot 17 Star.jpg",
+    "path": "/images/cards/the-star.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_17_Star.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-moon",
+    "filename": "RWS Tarot 18 Moon.jpg",
+    "path": "/images/cards/the-moon.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_18_Moon.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-sun",
+    "filename": "RWS Tarot 19 Sun.jpg",
+    "path": "/images/cards/the-sun.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "judgement",
+    "filename": "RWS Tarot 20 Judgement.jpg",
+    "path": "/images/cards/judgement.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_20_Judgement.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "the-world",
+    "filename": "RWS Tarot 21 World.jpg",
+    "path": "/images/cards/the-world.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_21_World.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-01",
+    "filename": "Cups01.jpg",
+    "path": "/images/cards/cups-01.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups01.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-02",
+    "filename": "Cups02.jpg",
+    "path": "/images/cards/cups-02.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups02.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-03",
+    "filename": "Cups03.jpg",
+    "path": "/images/cards/cups-03.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups03.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-04",
+    "filename": "Cups04.jpg",
+    "path": "/images/cards/cups-04.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups04.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-05",
+    "filename": "Cups05.jpg",
+    "path": "/images/cards/cups-05.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups05.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-06",
+    "filename": "Cups06.jpg",
+    "path": "/images/cards/cups-06.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups06.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-07",
+    "filename": "Cups07.jpg",
+    "path": "/images/cards/cups-07.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups07.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-08",
+    "filename": "Cups08.jpg",
+    "path": "/images/cards/cups-08.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups08.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-09",
+    "filename": "Cups09.jpg",
+    "path": "/images/cards/cups-09.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups09.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-10",
+    "filename": "Cups10.jpg",
+    "path": "/images/cards/cups-10.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups10.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-11",
+    "filename": "Cups11.jpg",
+    "path": "/images/cards/cups-11.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups11.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-12",
+    "filename": "Cups12.jpg",
+    "path": "/images/cards/cups-12.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups12.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-13",
+    "filename": "Cups13.jpg",
+    "path": "/images/cards/cups-13.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups13.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "cups-14",
+    "filename": "Cups14.jpg",
+    "path": "/images/cards/cups-14.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Cups14.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-01",
+    "filename": "Pents01.jpg",
+    "path": "/images/cards/pentacles-01.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents01.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-02",
+    "filename": "Pents02.jpg",
+    "path": "/images/cards/pentacles-02.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents02.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-03",
+    "filename": "Pents03.jpg",
+    "path": "/images/cards/pentacles-03.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents03.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-04",
+    "filename": "Pents04.jpg",
+    "path": "/images/cards/pentacles-04.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents04.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-05",
+    "filename": "Pents05.jpg",
+    "path": "/images/cards/pentacles-05.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents05.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-06",
+    "filename": "Pents06.jpg",
+    "path": "/images/cards/pentacles-06.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents06.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-07",
+    "filename": "Pents07.jpg",
+    "path": "/images/cards/pentacles-07.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents07.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-08",
+    "filename": "Pents08.jpg",
+    "path": "/images/cards/pentacles-08.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents08.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-09",
+    "filename": "Pents09.jpg",
+    "path": "/images/cards/pentacles-09.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents09.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-10",
+    "filename": "Pents10.jpg",
+    "path": "/images/cards/pentacles-10.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents10.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-11",
+    "filename": "Pents11.jpg",
+    "path": "/images/cards/pentacles-11.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents11.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-12",
+    "filename": "Pents12.jpg",
+    "path": "/images/cards/pentacles-12.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents12.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-13",
+    "filename": "Pents13.jpg",
+    "path": "/images/cards/pentacles-13.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents13.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "pentacles-14",
+    "filename": "Pents14.jpg",
+    "path": "/images/cards/pentacles-14.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pents14.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-01",
+    "filename": "Swords01.jpg",
+    "path": "/images/cards/swords-01.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords01.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-02",
+    "filename": "Swords02.jpg",
+    "path": "/images/cards/swords-02.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords02.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-03",
+    "filename": "Swords03.jpg",
+    "path": "/images/cards/swords-03.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords03.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-04",
+    "filename": "Swords04.jpg",
+    "path": "/images/cards/swords-04.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords04.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-05",
+    "filename": "Swords05.jpg",
+    "path": "/images/cards/swords-05.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords05.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-06",
+    "filename": "Swords06.jpg",
+    "path": "/images/cards/swords-06.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords06.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-07",
+    "filename": "Swords07.jpg",
+    "path": "/images/cards/swords-07.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords07.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-08",
+    "filename": "Swords08.jpg",
+    "path": "/images/cards/swords-08.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords08.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-09",
+    "filename": "Swords09.jpg",
+    "path": "/images/cards/swords-09.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords09.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-10",
+    "filename": "Swords10.jpg",
+    "path": "/images/cards/swords-10.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords10.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-11",
+    "filename": "Swords11.jpg",
+    "path": "/images/cards/swords-11.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-12",
+    "filename": "Swords12.jpg",
+    "path": "/images/cards/swords-12.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords12.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-13",
+    "filename": "Swords13.jpg",
+    "path": "/images/cards/swords-13.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords13.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "swords-14",
+    "filename": "Swords14.jpg",
+    "path": "/images/cards/swords-14.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Swords14.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-01",
+    "filename": "Wands01.jpg",
+    "path": "/images/cards/wands-01.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands01.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-02",
+    "filename": "Wands02.jpg",
+    "path": "/images/cards/wands-02.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands02.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-03",
+    "filename": "Wands03.jpg",
+    "path": "/images/cards/wands-03.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands03.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-04",
+    "filename": "Wands04.jpg",
+    "path": "/images/cards/wands-04.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands04.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-05",
+    "filename": "Wands05.jpg",
+    "path": "/images/cards/wands-05.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands05.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-06",
+    "filename": "Wands06.jpg",
+    "path": "/images/cards/wands-06.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands06.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-07",
+    "filename": "Wands07.jpg",
+    "path": "/images/cards/wands-07.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands07.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-08",
+    "filename": "Wands08.jpg",
+    "path": "/images/cards/wands-08.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands08.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-09",
+    "filename": "Wands09.jpg",
+    "path": "/images/cards/wands-09.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands09.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-10",
+    "filename": "Wands10.jpg",
+    "path": "/images/cards/wands-10.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands10.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-11",
+    "filename": "Wands11.jpg",
+    "path": "/images/cards/wands-11.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands11.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-12",
+    "filename": "Wands12.jpg",
+    "path": "/images/cards/wands-12.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands12.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-13",
+    "filename": "Wands13.jpg",
+    "path": "/images/cards/wands-13.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands13.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  {
+    "slug": "wands-14",
+    "filename": "Wands14.jpg",
+    "path": "/images/cards/wands-14.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Wands14.jpg",
+    "author": "Pamela Colman Smith",
+    "published": 1910,
+    "license": "Public Domain Mark 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  }
+]
