@@ -1,128 +1,92 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import { CardsThreeIcon } from "@phosphor-icons/react";
+import { motion } from "motion/react";
 import Image from "next/image";
-import { useRef } from "react";
 
 interface DeckStackProps {
   cardBackSrc: string;
-  onShuffle: () => void;
+  onShuffle(): void;
   label: string;
   sublabel: string;
 }
 
-export function DeckStack({ cardBackSrc, onShuffle, label, sublabel }: DeckStackProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+const topCardVariants = {
+  idle: { y: 0, rotate: 0 },
+  hover: { y: -10, rotate: -2 },
+};
 
-  /* ── 3D tilt tracking ── */
-  const rawX = useMotionValue(0);
-  const rawY = useMotionValue(0);
+const middleCardVariants = {
+  idle: { x: 4, y: 5, rotate: 1.5 },
+  hover: { x: 9, y: 8, rotate: 3 },
+};
 
-  const springConfig = { stiffness: 180, damping: 22 };
-  const rotateX = useSpring(useTransform(rawY, [-1, 1], [18, -18]), springConfig);
-  const rotateY = useSpring(useTransform(rawX, [-1, 1], [-22, 22]), springConfig);
-
-  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-    const rect = containerRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    rawX.set((e.clientX - cx) / (rect.width / 2));
-    rawY.set((e.clientY - cy) / (rect.height / 2));
-  }
-
-  function handleMouseLeave() {
-    rawX.set(0);
-    rawY.set(0);
-  }
-
-  /* ── stacked cards (back faces offset) ── */
-  const stackLayers = [
-    { x: 4, y: 4, rotate: 2, scale: 0.94, zIndex: 0, opacity: 0.55 },
-    { x: 2, y: 2, rotate: 1, scale: 0.97, zIndex: 1, opacity: 0.75 },
-    { x: 0, y: 0, rotate: 0, scale: 1, zIndex: 2, opacity: 1 },
-  ];
-
+export function DeckStack({
+  cardBackSrc,
+  onShuffle,
+  label,
+  sublabel,
+}: DeckStackProps) {
   return (
-    <div className="flex flex-col items-center gap-10">
-      {/* 3D Deck */}
-      <div
-        ref={containerRef}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        className="cursor-pointer select-none"
-        style={{ perspective: "900px" }}
-      >
-        <motion.div
-          style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-          className="relative h-64 w-44 sm:h-72 sm:w-48"
+    <motion.button
+      type="button"
+      onClick={onShuffle}
+      initial="idle"
+      animate="idle"
+      whileHover="hover"
+      whileTap={{ scale: 0.985 }}
+      aria-label={label}
+      className="group flex w-full flex-col items-center rounded-panel border border-line bg-soft/45 px-6 py-8 text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+    >
+      <span className="relative block h-52 w-36 sm:h-60 sm:w-40">
+        <motion.span
+          variants={middleCardVariants}
+          className="absolute inset-0 overflow-hidden rounded-[0.5rem] border border-line bg-surface"
         >
-          {stackLayers.map((layer, i) => (
-            <motion.div
-              key={i}
-              className="absolute inset-0 overflow-hidden rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000]"
-              style={{
-                x: layer.x,
-                y: layer.y,
-                rotate: layer.rotate,
-                scale: layer.scale,
-                zIndex: layer.zIndex,
-                opacity: layer.opacity,
-                transformStyle: "preserve-3d",
-              }}
-            >
-              <Image
-                src={cardBackSrc}
-                alt=""
-                fill
-                sizes="200px"
-                className="object-cover"
-                priority={i === 2}
-              />
-              {/* Top-face highlight */}
-              <motion.div
-                className="pointer-events-none absolute inset-0 rounded-xl"
-                style={{
-                  background: useTransform(
-                    [rotateX, rotateY],
-                    ([rx, ry]) =>
-                      `radial-gradient(ellipse at ${50 + (ry as number) * 25}% ${50 - (rx as number) * 25}%, rgba(255,255,255,0.22) 0%, transparent 70%)`,
-                  ),
-                }}
-              />
-            </motion.div>
-          ))}
-
-          {/* Specular shine layer on top card */}
-          <motion.div
-            className="pointer-events-none absolute inset-0 z-10 rounded-xl"
-            style={{
-              background: useTransform(
-                [rotateX, rotateY],
-                ([rx, ry]) =>
-                  `radial-gradient(ellipse at ${50 + (ry as number) * 30}% ${50 - (rx as number) * 30}%, rgba(255,255,255,0.18) 0%, transparent 65%)`,
-              ),
-            }}
+          <Image
+            src={cardBackSrc}
+            alt=""
+            fill
+            loading="eager"
+            sizes="160px"
+            className="object-cover opacity-60"
           />
-        </motion.div>
-      </div>
+        </motion.span>
+        <span className="absolute inset-0 translate-x-2 translate-y-2 overflow-hidden rounded-[0.5rem] border border-line bg-surface opacity-70">
+          <Image
+            src={cardBackSrc}
+            alt=""
+            fill
+            loading="eager"
+            sizes="160px"
+            className="object-cover"
+          />
+        </span>
+        <motion.span
+          variants={topCardVariants}
+          className="absolute inset-0 overflow-hidden rounded-[0.5rem] border border-line bg-surface"
+        >
+          <Image
+            src={cardBackSrc}
+            alt=""
+            fill
+            loading="eager"
+            sizes="160px"
+            className="object-cover"
+          />
+        </motion.span>
+      </span>
 
-      {/* Text */}
-      <div className="text-center">
-        <p className="font-editorial text-xl text-ink sm:text-2xl">{label}</p>
-        <p className="mt-1.5 text-sm text-muted">{sublabel}</p>
-      </div>
-
-      {/* CTA button */}
-      <motion.button
-        type="button"
-        onClick={onShuffle}
-        className="moonlight-button inline-flex min-h-14 items-center gap-3 rounded-full bg-[#e2c6ff] px-8 text-sm font-bold text-black"
-        whileTap={{ scale: 0.95 }}
-      >
-        <span className="text-xl">🔀</span>
+      <span className="mt-7 font-editorial text-2xl font-medium text-ink">
         {label}
-      </motion.button>
-    </div>
+      </span>
+      <span className="mt-2 max-w-xs text-xs leading-5 text-muted">
+        {sublabel}
+      </span>
+      <span className="mt-6 inline-flex items-center gap-2 rounded-control bg-ink px-4 py-2.5 text-xs font-semibold text-canvas transition-transform group-hover:-translate-y-0.5">
+        <CardsThreeIcon size={17} weight="bold" aria-hidden />
+        {label}
+      </span>
+    </motion.button>
   );
 }

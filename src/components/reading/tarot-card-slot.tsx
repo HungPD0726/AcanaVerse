@@ -1,19 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { motion } from "motion/react";
+import {
+  defaultDeck,
+  getDeckCardImageSrc,
+  tarotDecksBySlug,
+} from "@/data/decks";
 import type {
   DrawnCard,
   Locale,
   SpreadPosition,
   TarotCard,
 } from "@/domain/tarot";
-
 import { audioEngine } from "@/lib/audio-engine";
-
-import { tarotDecksBySlug } from "@/data/decks";
 
 export function TarotCardSlot({
   drawnCard,
@@ -22,6 +23,8 @@ export function TarotCardSlot({
   locale,
   canReveal,
   onReveal,
+  onActivate,
+  isActive = false,
   compact = false,
   cardBackSrc = "/images/brand/card-back.webp",
 }: {
@@ -31,85 +34,77 @@ export function TarotCardSlot({
   locale: Locale;
   canReveal: boolean;
   onReveal(): void;
+  onActivate(): void;
+  isActive?: boolean;
   compact?: boolean;
   cardBackSrc?: string;
 }) {
   const t = useTranslations("Reading");
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const activeDeckDef = Array.from(tarotDecksBySlug.values()).find(
-    (d) => d.cardBackSrc === cardBackSrc,
+    (deck) => deck.cardBackSrc === cardBackSrc,
   );
-  const frontFilter = activeDeckDef?.frontImageFilter ?? "none";
+  const cardFaceSrc = getDeckCardImageSrc(
+    activeDeckDef ?? defaultDeck,
+    card,
+  );
 
   const handleCardClick = () => {
-    if (canReveal && !drawnCard.isRevealed) {
+    if (!drawnCard.isRevealed && canReveal) {
       audioEngine.playFlipSound();
+      onReveal();
+      return;
     }
-    onReveal();
-  };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (!drawnCard.isRevealed && !canReveal) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    setTilt({ x: x * 12, y: -y * 12 });
-  };
-
-  const handleMouseLeave = () => {
-    setTilt({ x: 0, y: 0 });
+    if (drawnCard.isRevealed) {
+      onActivate();
+    }
   };
 
   const orientationLabel =
     drawnCard.orientation === "upright" ? t("upright") : t("reversed");
   const accessibleName = drawnCard.isRevealed
-    ? `${position.order}. ${position.label[locale]}: ${card.name[locale]}, ${orientationLabel}`
+    ? `${position.order}. ${position.label[locale]}: ${card.name[locale]}, ${orientationLabel}. ${t("reviewCard")}`
     : `${position.order}. ${position.label[locale]}. ${
         canReveal ? t("tapToReveal") : t("waitingToReveal")
       }`;
+  const isInteractive = canReveal || drawnCard.isRevealed;
 
   return (
     <div className="flex flex-col items-center gap-2">
       <motion.button
         type="button"
         onClick={handleCardClick}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        disabled={!canReveal}
+        disabled={!isInteractive}
         aria-label={accessibleName}
+        aria-pressed={drawnCard.isRevealed ? isActive : undefined}
         data-can-reveal={canReveal && !drawnCard.isRevealed}
+        data-active={isActive}
         data-testid={`spread-card-${position.order}`}
-        whileHover={canReveal || drawnCard.isRevealed ? { scale: 1.045 } : undefined}
-        whileTap={canReveal ? { scale: 0.96 } : undefined}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        style={{
-          transform: `rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)`,
-        }}
-        className={`tarot-card-perspective group relative shrink-0 rounded-[0.55rem] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${
+        whileHover={isInteractive ? { y: -3, scale: 1.015 } : undefined}
+        whileTap={isInteractive ? { scale: 0.985 } : undefined}
+        className={`tarot-card-perspective group relative shrink-0 rounded-[0.55rem] transition-shadow focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${
+          isActive ? "ring-2 ring-accent ring-offset-2 ring-offset-canvas" : ""
+        } ${
           compact
-            ? "h-[9rem] w-[5.25rem] sm:h-[10.5rem] sm:w-[6.15rem]"
-            : "h-[16rem] w-[9.35rem] sm:h-[19rem] sm:w-[11.1rem]"
+            ? "h-[8.5rem] w-[5rem] sm:h-[9.5rem] sm:w-[5.6rem]"
+            : "h-[13rem] w-[7.6rem] sm:h-[16rem] sm:w-[9.35rem]"
         }`}
       >
         <span
           className="tarot-card-inner block"
           data-revealed={drawnCard.isRevealed}
         >
-          {/* Metallic shimmer sweep on card reveal */}
-          <span className="tarot-shimmer-overlay" />
-
-          {/* Card Back Face */}
           <span className="tarot-card-face border border-line bg-soft">
             <Image
               src={cardBackSrc}
               alt=""
               fill
-              sizes={compact ? "110px" : "190px"}
+              loading="eager"
+              sizes={compact ? "90px" : "160px"}
               className="object-cover"
             />
           </span>
 
-          {/* Card Front Face */}
           <span className="tarot-card-face tarot-card-front border border-line bg-surface">
             <span
               className="relative block size-full"
@@ -121,19 +116,18 @@ export function TarotCardSlot({
               }}
             >
               <Image
-                src={card.image.src}
-                alt={card.image.alt[locale]}
+                src={cardFaceSrc}
+                alt={drawnCard.isRevealed ? card.image.alt[locale] : ""}
                 fill
-                sizes={compact ? "110px" : "190px"}
+                sizes={compact ? "90px" : "160px"}
                 className="object-cover"
-                style={{ filter: frontFilter }}
               />
             </span>
           </span>
         </span>
       </motion.button>
-      <p className="max-w-32 text-center text-[0.68rem] leading-4 font-semibold uppercase tracking-[0.12em] text-muted">
-        {position.order}. {position.label[locale]}
+      <p className="max-w-32 text-center text-[0.65rem] font-semibold uppercase leading-4 tracking-[0.1em] text-muted">
+        {String(position.order).padStart(2, "0")} · {position.label[locale]}
       </p>
     </div>
   );

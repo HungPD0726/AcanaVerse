@@ -77,11 +77,17 @@ export interface TarotDeckDefinition {
   name: LocalizedText;
   description: LocalizedText;
   cardBackSrc: string;
+  cardFaceDirectory?: string;
+  artworkAuthor: string;
+  artworkPeriod: LocalizedText;
+  sourcePage: string;
+  license: string;
+  licenseUrl: string;
+  mappingNote?: LocalizedText;
   badgeText?: LocalizedText;
   accentColor: string;
   cardBorderClass?: string;
   auraGlowClass?: string;
-  frontImageFilter?: string;
   frameOverlayClass?: string;
 }
 

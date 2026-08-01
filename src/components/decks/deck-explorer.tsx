@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { useLocale } from "next-intl";
 import { FanningDeckCard } from "@/components/decks/fanning-deck-card";
 import { tarotCards } from "@/data/cards";
-import { tarotDecks } from "@/data/decks";
+import { getDeckCardImageSrc, tarotDecks } from "@/data/decks";
 import type { Locale, TarotCard } from "@/domain/tarot";
 import { audioEngine } from "@/lib/audio-engine";
 
@@ -122,7 +122,7 @@ export function DeckExplorer() {
               cards={majorArcanaCards}
               locale={locale}
               onSelectCard={handleCardClick}
-              frontImageFilter={activeDeck.frontImageFilter}
+              deck={activeDeck}
               frameOverlayClass={activeDeck.frameOverlayClass}
             />
 
@@ -133,7 +133,7 @@ export function DeckExplorer() {
               cards={wandsCards}
               locale={locale}
               onSelectCard={handleCardClick}
-              frontImageFilter={activeDeck.frontImageFilter}
+              deck={activeDeck}
               frameOverlayClass={activeDeck.frameOverlayClass}
             />
 
@@ -144,7 +144,7 @@ export function DeckExplorer() {
               cards={cupsCards}
               locale={locale}
               onSelectCard={handleCardClick}
-              frontImageFilter={activeDeck.frontImageFilter}
+              deck={activeDeck}
               frameOverlayClass={activeDeck.frameOverlayClass}
             />
 
@@ -155,7 +155,7 @@ export function DeckExplorer() {
               cards={swordsCards}
               locale={locale}
               onSelectCard={handleCardClick}
-              frontImageFilter={activeDeck.frontImageFilter}
+              deck={activeDeck}
               frameOverlayClass={activeDeck.frameOverlayClass}
             />
 
@@ -166,7 +166,7 @@ export function DeckExplorer() {
               cards={pentaclesCards}
               locale={locale}
               onSelectCard={handleCardClick}
-              frontImageFilter={activeDeck.frontImageFilter}
+              deck={activeDeck}
               frameOverlayClass={activeDeck.frameOverlayClass}
             />
           </div>
@@ -225,12 +225,11 @@ export function DeckExplorer() {
               >
                 <div className={`relative aspect-[2/3.4] w-full overflow-hidden rounded-lg ${activeDeck.frameOverlayClass ?? ""}`}>
                   <Image
-                    src={card.image.src}
+                    src={getDeckCardImageSrc(activeDeck, card)}
                     alt={card.name[locale]}
                     fill
                     sizes="(min-width: 1024px) 16vw, 40vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={{ filter: activeDeck.frontImageFilter }}
                   />
                 </div>
                 <h4 className="mt-2 text-center font-editorial text-xs font-semibold text-ink line-clamp-1">
@@ -261,12 +260,11 @@ export function DeckExplorer() {
             <div className="grid gap-6 sm:grid-cols-[11rem_1fr] sm:items-center">
               <div className={`relative aspect-[2/3.4] w-full overflow-hidden rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_#000] ${activeDeck.frameOverlayClass ?? ""}`}>
                 <Image
-                  src={inspectCard.image.src}
+                  src={getDeckCardImageSrc(activeDeck, inspectCard)}
                   alt={inspectCard.name[locale]}
                   fill
                   sizes="200px"
                   className="object-cover"
-                  style={{ filter: activeDeck.frontImageFilter }}
                 />
               </div>
 

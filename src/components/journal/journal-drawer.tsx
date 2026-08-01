@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BookBookmarkIcon, XIcon } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "motion/react";
 import { useLocale } from "next-intl";
@@ -14,17 +14,16 @@ export function JournalDrawer() {
   const [isOpen, setIsOpen] = useState(false);
   const [entries, setEntries] = useState<JournalEntry[]>([]);
 
-  useEffect(() => {
-    if (isOpen) {
-      setEntries(getJournalEntries());
-    }
-  }, [isOpen]);
+  const openDrawer = () => {
+    setEntries(getJournalEntries());
+    setIsOpen(true);
+  };
 
   return (
     <>
       <button
         type="button"
-        onClick={() => setIsOpen(true)}
+        onClick={openDrawer}
         aria-label={locale === "vi" ? "Nhật ký Tarot" : "Tarot Journal"}
         title={locale === "vi" ? "Nhật ký Tarot" : "Tarot Journal"}
         className="inline-flex size-10 items-center justify-center rounded-control border border-line bg-surface text-muted transition-colors hover:bg-soft hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -91,7 +90,7 @@ export function JournalDrawer() {
                           </div>
 
                           <h4 className="mt-2 text-sm font-semibold text-ink">
-                            "{entry.question}"
+                            “{entry.question}”
                           </h4>
 
                           <ol className="mt-3 flex flex-wrap gap-1.5">

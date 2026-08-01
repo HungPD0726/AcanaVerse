@@ -1,0 +1,792 @@
+{
+  "deck": "sola-busca",
+  "cardCount": 78,
+  "artist": "Sola Busca, attributed to Nicola di Maestro Antonio d'Ancona",
+  "period": "c. 1491",
+  "sourceCategory": "https://commons.wikimedia.org/wiki/Category:Sola-Busca_tarot_deck",
+  "metadataReference": "https://raw.githubusercontent.com/mixvlad/TarotCards/main/tarot/sola-busca/metadata.json",
+  "assetMirror": "https://github.com/mixvlad/TarotCards (files retain their per-file public-domain status)",
+  "mapping": "Historical 78-card positional correspondence. Sola Busca trump imagery and names differ from Rider-Waite-Smith.",
+  "cards": [
+    {
+      "slug": "the-fool",
+      "sourceFile": "Sola Busca tarot card 00.jpg",
+      "path": "/images/decks/sola-busca/the-fool.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_00.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-magician",
+      "sourceFile": "Sola Busca tarot card 01.jpg",
+      "path": "/images/decks/sola-busca/the-magician.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_01.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-high-priestess",
+      "sourceFile": "Sola Busca tarot card 02.jpg",
+      "path": "/images/decks/sola-busca/the-high-priestess.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_02.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-empress",
+      "sourceFile": "Sola Busca tarot card 03.jpg",
+      "path": "/images/decks/sola-busca/the-empress.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_03.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 876,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-emperor",
+      "sourceFile": "Sola Busca tarot card 04.jpg",
+      "path": "/images/decks/sola-busca/the-emperor.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_04.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-hierophant",
+      "sourceFile": "Sola Busca tarot card 05.jpg",
+      "path": "/images/decks/sola-busca/the-hierophant.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_05.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-lovers",
+      "sourceFile": "Sola Busca tarot card 06.jpg",
+      "path": "/images/decks/sola-busca/the-lovers.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_06.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-chariot",
+      "sourceFile": "Sola Busca tarot card 07.jpg",
+      "path": "/images/decks/sola-busca/the-chariot.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_07.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "strength",
+      "sourceFile": "Sola Busca tarot card 08.jpg",
+      "path": "/images/decks/sola-busca/strength.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_08.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 876,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-hermit",
+      "sourceFile": "Sola Busca tarot card 09.jpg",
+      "path": "/images/decks/sola-busca/the-hermit.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_09.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "wheel-of-fortune",
+      "sourceFile": "Sola Busca tarot card 10.jpg",
+      "path": "/images/decks/sola-busca/wheel-of-fortune.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_10.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "justice",
+      "sourceFile": "Sola Busca tarot card 11.jpg",
+      "path": "/images/decks/sola-busca/justice.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_11.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-hanged-man",
+      "sourceFile": "Sola Busca tarot card 12.jpg",
+      "path": "/images/decks/sola-busca/the-hanged-man.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_12.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "death",
+      "sourceFile": "Sola Busca tarot card 13.jpg",
+      "path": "/images/decks/sola-busca/death.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_13.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "temperance",
+      "sourceFile": "Sola Busca tarot card 14.jpg",
+      "path": "/images/decks/sola-busca/temperance.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_14.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-devil",
+      "sourceFile": "Sola Busca tarot card 15.jpg",
+      "path": "/images/decks/sola-busca/the-devil.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_15.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-tower",
+      "sourceFile": "Sola Busca tarot card 16.jpg",
+      "path": "/images/decks/sola-busca/the-tower.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_16.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-star",
+      "sourceFile": "Sola Busca tarot card 17.jpg",
+      "path": "/images/decks/sola-busca/the-star.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_17.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-moon",
+      "sourceFile": "Sola Busca tarot card 18.jpg",
+      "path": "/images/decks/sola-busca/the-moon.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_18.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-sun",
+      "sourceFile": "Sola Busca tarot card 19.jpg",
+      "path": "/images/decks/sola-busca/the-sun.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_19.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "judgement",
+      "sourceFile": "Sola Busca tarot card 20.jpg",
+      "path": "/images/decks/sola-busca/judgement.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_20.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-world",
+      "sourceFile": "Sola Busca tarot card 21.jpg",
+      "path": "/images/decks/sola-busca/the-world.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_21.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ace-of-wands",
+      "sourceFile": "Sola Busca tarot card 64.jpg",
+      "path": "/images/decks/sola-busca/ace-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_64.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "two-of-wands",
+      "sourceFile": "Sola Busca tarot card 65.jpg",
+      "path": "/images/decks/sola-busca/two-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_65.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "three-of-wands",
+      "sourceFile": "Sola Busca tarot card 66.jpg",
+      "path": "/images/decks/sola-busca/three-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_66.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "four-of-wands",
+      "sourceFile": "Sola Busca tarot card 67.jpg",
+      "path": "/images/decks/sola-busca/four-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_67.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "five-of-wands",
+      "sourceFile": "Sola Busca tarot card 68.jpg",
+      "path": "/images/decks/sola-busca/five-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_68.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "six-of-wands",
+      "sourceFile": "Sola Busca tarot card 69.jpg",
+      "path": "/images/decks/sola-busca/six-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_69.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "seven-of-wands",
+      "sourceFile": "Sola Busca tarot card 70.jpg",
+      "path": "/images/decks/sola-busca/seven-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_70.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "eight-of-wands",
+      "sourceFile": "Sola Busca tarot card 71.jpg",
+      "path": "/images/decks/sola-busca/eight-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_71.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "nine-of-wands",
+      "sourceFile": "Sola Busca tarot card 72.jpg",
+      "path": "/images/decks/sola-busca/nine-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_72.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ten-of-wands",
+      "sourceFile": "Sola Busca tarot card 73.jpg",
+      "path": "/images/decks/sola-busca/ten-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_73.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "page-of-wands",
+      "sourceFile": "Sola Busca tarot card 74.jpg",
+      "path": "/images/decks/sola-busca/page-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_74.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "knight-of-wands",
+      "sourceFile": "Sola Busca tarot card 75.jpg",
+      "path": "/images/decks/sola-busca/knight-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_75.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "queen-of-wands",
+      "sourceFile": "Sola Busca tarot card 76.jpg",
+      "path": "/images/decks/sola-busca/queen-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_76.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "king-of-wands",
+      "sourceFile": "Sola Busca tarot card 77.jpg",
+      "path": "/images/decks/sola-busca/king-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_77.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ace-of-cups",
+      "sourceFile": "Sola Busca tarot card 22.jpg",
+      "path": "/images/decks/sola-busca/ace-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_22.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "two-of-cups",
+      "sourceFile": "Sola Busca tarot card 23.jpg",
+      "path": "/images/decks/sola-busca/two-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_23.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "three-of-cups",
+      "sourceFile": "Sola Busca tarot card 24.jpg",
+      "path": "/images/decks/sola-busca/three-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_24.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "four-of-cups",
+      "sourceFile": "Sola Busca tarot card 25.jpg",
+      "path": "/images/decks/sola-busca/four-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_25.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "five-of-cups",
+      "sourceFile": "Sola Busca tarot card 26.jpg",
+      "path": "/images/decks/sola-busca/five-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_26.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "six-of-cups",
+      "sourceFile": "Sola Busca tarot card 27.jpg",
+      "path": "/images/decks/sola-busca/six-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_27.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "seven-of-cups",
+      "sourceFile": "Sola Busca tarot card 28.jpg",
+      "path": "/images/decks/sola-busca/seven-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_28.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "eight-of-cups",
+      "sourceFile": "Sola Busca tarot card 29.jpg",
+      "path": "/images/decks/sola-busca/eight-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_29.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "nine-of-cups",
+      "sourceFile": "Sola Busca tarot card 30.jpg",
+      "path": "/images/decks/sola-busca/nine-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_30.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ten-of-cups",
+      "sourceFile": "Sola Busca tarot card 31.jpg",
+      "path": "/images/decks/sola-busca/ten-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_31.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "page-of-cups",
+      "sourceFile": "Sola Busca tarot card 32.jpg",
+      "path": "/images/decks/sola-busca/page-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_32.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "knight-of-cups",
+      "sourceFile": "Sola Busca tarot card 33.jpg",
+      "path": "/images/decks/sola-busca/knight-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_33.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "queen-of-cups",
+      "sourceFile": "Sola Busca tarot card 34.jpg",
+      "path": "/images/decks/sola-busca/queen-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_34.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 876,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "king-of-cups",
+      "sourceFile": "Sola Busca tarot card 35.jpg",
+      "path": "/images/decks/sola-busca/king-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_35.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ace-of-swords",
+      "sourceFile": "Sola Busca tarot card 50.jpg",
+      "path": "/images/decks/sola-busca/ace-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_50.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "two-of-swords",
+      "sourceFile": "Sola Busca tarot card 51.jpg",
+      "path": "/images/decks/sola-busca/two-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_51.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "three-of-swords",
+      "sourceFile": "Sola Busca tarot card 52.jpg",
+      "path": "/images/decks/sola-busca/three-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_52.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "four-of-swords",
+      "sourceFile": "Sola Busca tarot card 53.jpg",
+      "path": "/images/decks/sola-busca/four-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_53.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "five-of-swords",
+      "sourceFile": "Sola Busca tarot card 54.jpg",
+      "path": "/images/decks/sola-busca/five-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_54.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "six-of-swords",
+      "sourceFile": "Sola Busca tarot card 55.jpg",
+      "path": "/images/decks/sola-busca/six-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_55.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "seven-of-swords",
+      "sourceFile": "Sola Busca tarot card 56.jpg",
+      "path": "/images/decks/sola-busca/seven-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_56.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "eight-of-swords",
+      "sourceFile": "Sola Busca tarot card 57.jpg",
+      "path": "/images/decks/sola-busca/eight-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_57.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "nine-of-swords",
+      "sourceFile": "Sola Busca tarot card 58.jpg",
+      "path": "/images/decks/sola-busca/nine-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_58.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ten-of-swords",
+      "sourceFile": "Sola Busca tarot card 59.jpg",
+      "path": "/images/decks/sola-busca/ten-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_59.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "page-of-swords",
+      "sourceFile": "Sola Busca tarot card 60.jpg",
+      "path": "/images/decks/sola-busca/page-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_60.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "knight-of-swords",
+      "sourceFile": "Sola Busca tarot card 61.jpg",
+      "path": "/images/decks/sola-busca/knight-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_61.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "queen-of-swords",
+      "sourceFile": "Sola Busca tarot card 62.jpg",
+      "path": "/images/decks/sola-busca/queen-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_62.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "king-of-swords",
+      "sourceFile": "Sola Busca tarot card 63.jpg",
+      "path": "/images/decks/sola-busca/king-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_63.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ace-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 36.jpg",
+      "path": "/images/decks/sola-busca/ace-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_36.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "two-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 37.jpg",
+      "path": "/images/decks/sola-busca/two-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_37.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "three-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 38.jpg",
+      "path": "/images/decks/sola-busca/three-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_38.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "four-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 39.jpg",
+      "path": "/images/decks/sola-busca/four-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_39.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 876,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "five-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 40.jpg",
+      "path": "/images/decks/sola-busca/five-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_40.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "six-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 41.jpg",
+      "path": "/images/decks/sola-busca/six-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_41.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "seven-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 42.jpg",
+      "path": "/images/decks/sola-busca/seven-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_42.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "eight-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 43.jpg",
+      "path": "/images/decks/sola-busca/eight-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_43.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "nine-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 44.jpg",
+      "path": "/images/decks/sola-busca/nine-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_44.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ten-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 45.jpg",
+      "path": "/images/decks/sola-busca/ten-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_45.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "page-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 46.jpg",
+      "path": "/images/decks/sola-busca/page-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_46.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "knight-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 47.jpg",
+      "path": "/images/decks/sola-busca/knight-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_47.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "queen-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 48.jpg",
+      "path": "/images/decks/sola-busca/queen-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_48.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "king-of-pentacles",
+      "sourceFile": "Sola Busca tarot card 49.jpg",
+      "path": "/images/decks/sola-busca/king-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sola_Busca_tarot_card_49.jpg",
+      "sourceWidth": 474,
+      "sourceHeight": 877,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    }
+  ]
+}

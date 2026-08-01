@@ -10,6 +10,7 @@
 /playwright-report
 /test-results
 /output/playwright
+.playwright-cli/
 
 # local
 .DS_Store
@@ -18,6 +19,7 @@
 !.env.example
 
 # debug
+*.log
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*

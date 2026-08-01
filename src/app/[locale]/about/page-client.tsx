@@ -7,6 +7,15 @@ import { useRef } from "react";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/domain/tarot";
 
+const heroStars = Array.from({ length: 90 }, (_, index) => ({
+  size: 1 + ((index * 37) % 30) / 10,
+  left: `${(index * 47) % 101}%`,
+  top: `${(index * 67) % 101}%`,
+  opacity: 0.2 + ((index * 13) % 8) / 10,
+  duration: 2 + ((index * 29) % 30) / 10,
+  delay: ((index * 17) % 40) / 10,
+}));
+
 /* ─── timeline data ─────────────────────────────────────────── */
 const timeline = [
   {
@@ -263,22 +272,22 @@ export default function TarotAboutPage() {
           className="pointer-events-none absolute inset-0"
           style={{ y: heroY }}
         >
-          {Array.from({ length: 90 }).map((_, i) => (
+          {heroStars.map((star, i) => (
             <motion.div
               key={i}
               className="absolute rounded-full bg-white"
               style={{
-                width: Math.random() * 3 + 1,
-                height: Math.random() * 3 + 1,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                opacity: Math.random() * 0.8 + 0.2,
+                width: star.size,
+                height: star.size,
+                left: star.left,
+                top: star.top,
+                opacity: star.opacity,
               }}
               animate={{ opacity: [0.2, 1, 0.2] }}
               transition={{
-                duration: 2 + Math.random() * 3,
+                duration: star.duration,
                 repeat: Infinity,
-                delay: Math.random() * 4,
+                delay: star.delay,
               }}
             />
           ))}

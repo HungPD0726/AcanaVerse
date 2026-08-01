@@ -25,7 +25,7 @@ export function MagicParticles({ active = true }: { active?: boolean }) {
     if (!ctx) return;
 
     let animId: number;
-    let particles: Particle[] = [];
+    const particles: Particle[] = [];
     const colors = ["#d4af37", "#f3e5ab", "#c5a059", "#ffffff", "#e6ca65"];
 
     const resize = () => {

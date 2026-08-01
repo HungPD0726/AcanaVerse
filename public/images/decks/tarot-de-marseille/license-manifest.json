@@ -1,0 +1,792 @@
+{
+  "deck": "tarot-de-marseille",
+  "cardCount": 78,
+  "artist": "Traditional Tarot de Marseille artwork",
+  "period": "17th–18th century tradition",
+  "sourceCategory": "https://commons.wikimedia.org/wiki/Category:Tarot_de_Marseille_(Single_Cards)",
+  "metadataReference": "https://raw.githubusercontent.com/mixvlad/TarotCards/main/tarot/marseille/metadata.json",
+  "assetMirror": "https://github.com/mixvlad/TarotCards (files retain their per-file public-domain status)",
+  "mapping": "Marseille VIII Justice and XI Strength are mapped to their matching identities.",
+  "cards": [
+    {
+      "slug": "the-fool",
+      "sourceFile": "TT Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-fool.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:TT_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-magician",
+      "sourceFile": "T1 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-magician.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T1_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-high-priestess",
+      "sourceFile": "T2 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-high-priestess.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T2_Tarot.png",
+      "sourceWidth": 814,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-empress",
+      "sourceFile": "T3 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-empress.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T3_Tarot.png",
+      "sourceWidth": 814,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-emperor",
+      "sourceFile": "T4 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-emperor.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T4_Tarot.png",
+      "sourceWidth": 814,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-hierophant",
+      "sourceFile": "T5 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-hierophant.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T5_Tarot.png",
+      "sourceWidth": 812,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-lovers",
+      "sourceFile": "T6 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-lovers.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T6_Tarot.png",
+      "sourceWidth": 816,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-chariot",
+      "sourceFile": "T7 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-chariot.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T7_Tarot.png",
+      "sourceWidth": 816,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "strength",
+      "sourceFile": "T11 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/strength.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T11_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-hermit",
+      "sourceFile": "T9 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-hermit.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T9_Tarot.png",
+      "sourceWidth": 821,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "wheel-of-fortune",
+      "sourceFile": "T10 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/wheel-of-fortune.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T10_Tarot.png",
+      "sourceWidth": 812,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "justice",
+      "sourceFile": "T8 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/justice.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T8_Tarot.png",
+      "sourceWidth": 816,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-hanged-man",
+      "sourceFile": "T12 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-hanged-man.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T12_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "death",
+      "sourceFile": "T13 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/death.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T13_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "temperance",
+      "sourceFile": "T14 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/temperance.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T14_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-devil",
+      "sourceFile": "T15 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-devil.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T15_Tarot.png",
+      "sourceWidth": 820,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-tower",
+      "sourceFile": "T16 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-tower.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T16_Tarot.png",
+      "sourceWidth": 814,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-star",
+      "sourceFile": "T17 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-star.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T17_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-moon",
+      "sourceFile": "T18 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-moon.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T18_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-sun",
+      "sourceFile": "T19 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-sun.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T19_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "judgement",
+      "sourceFile": "T20 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/judgement.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T20_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "the-world",
+      "sourceFile": "T21 Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/the-world.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:T21_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ace-of-wands",
+      "sourceFile": "1B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/ace-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:1B_Tarot.png",
+      "sourceWidth": 816,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "two-of-wands",
+      "sourceFile": "2B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/two-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:2B_Tarot.png",
+      "sourceWidth": 816,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "three-of-wands",
+      "sourceFile": "3B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/three-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:3B_Tarot.png",
+      "sourceWidth": 816,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "four-of-wands",
+      "sourceFile": "4B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/four-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:4B_Tarot.png",
+      "sourceWidth": 816,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "five-of-wands",
+      "sourceFile": "5B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/five-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:5B_Tarot.png",
+      "sourceWidth": 815,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "six-of-wands",
+      "sourceFile": "6B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/six-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:6B_Tarot.png",
+      "sourceWidth": 815,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "seven-of-wands",
+      "sourceFile": "7B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/seven-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:7B_Tarot.png",
+      "sourceWidth": 815,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "eight-of-wands",
+      "sourceFile": "8B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/eight-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:8B_Tarot.png",
+      "sourceWidth": 815,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "nine-of-wands",
+      "sourceFile": "9B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/nine-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:9B_Tarot.png",
+      "sourceWidth": 814,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ten-of-wands",
+      "sourceFile": "10B Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/ten-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:10B_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "page-of-wands",
+      "sourceFile": "HB Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/page-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:HB_Tarot.png",
+      "sourceWidth": 806,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "knight-of-wands",
+      "sourceFile": "JB Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/knight-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:JB_Tarot.png",
+      "sourceWidth": 817,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "queen-of-wands",
+      "sourceFile": "QB Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/queen-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:QB_Tarot.png",
+      "sourceWidth": 812,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "king-of-wands",
+      "sourceFile": "KB Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/king-of-wands.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:KB_Tarot.png",
+      "sourceWidth": 810,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ace-of-cups",
+      "sourceFile": "1C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/ace-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:1C_Tarot.png",
+      "sourceWidth": 809,
+      "sourceHeight": 1537,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "two-of-cups",
+      "sourceFile": "2C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/two-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:2C_Tarot.png",
+      "sourceWidth": 809,
+      "sourceHeight": 1537,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "three-of-cups",
+      "sourceFile": "3C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/three-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:3C_Tarot.png",
+      "sourceWidth": 805,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "four-of-cups",
+      "sourceFile": "4C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/four-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:4C_Tarot.png",
+      "sourceWidth": 806,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "five-of-cups",
+      "sourceFile": "5C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/five-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:5C_Tarot.png",
+      "sourceWidth": 814,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "six-of-cups",
+      "sourceFile": "6C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/six-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:6C_Tarot.png",
+      "sourceWidth": 805,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "seven-of-cups",
+      "sourceFile": "7C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/seven-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:7C_Tarot.png",
+      "sourceWidth": 811,
+      "sourceHeight": 1537,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "eight-of-cups",
+      "sourceFile": "8C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/eight-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:8C_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "nine-of-cups",
+      "sourceFile": "9C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/nine-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:9C_Tarot.png",
+      "sourceWidth": 817,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ten-of-cups",
+      "sourceFile": "10C Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/ten-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:10C_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "page-of-cups",
+      "sourceFile": "HC Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/page-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:HC_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "knight-of-cups",
+      "sourceFile": "JC Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/knight-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:JC_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "queen-of-cups",
+      "sourceFile": "QC Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/queen-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:QC_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "king-of-cups",
+      "sourceFile": "KC Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/king-of-cups.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:KC_Tarot.png",
+      "sourceWidth": 812,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ace-of-swords",
+      "sourceFile": "1S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/ace-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:1S_Tarot.png",
+      "sourceWidth": 818,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "two-of-swords",
+      "sourceFile": "2S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/two-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:2S_Tarot.png",
+      "sourceWidth": 811,
+      "sourceHeight": 1537,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "three-of-swords",
+      "sourceFile": "3S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/three-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:3S_Tarot.png",
+      "sourceWidth": 805,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "four-of-swords",
+      "sourceFile": "4S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/four-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:4S_Tarot.png",
+      "sourceWidth": 809,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "five-of-swords",
+      "sourceFile": "5S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/five-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:5S_Tarot.png",
+      "sourceWidth": 809,
+      "sourceHeight": 1537,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "six-of-swords",
+      "sourceFile": "6S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/six-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:6S_Tarot.png",
+      "sourceWidth": 817,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "seven-of-swords",
+      "sourceFile": "7S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/seven-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:7S_Tarot.png",
+      "sourceWidth": 812,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "eight-of-swords",
+      "sourceFile": "8S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/eight-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:8S_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "nine-of-swords",
+      "sourceFile": "9S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/nine-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:9S_Tarot.png",
+      "sourceWidth": 817,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ten-of-swords",
+      "sourceFile": "10S Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/ten-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:10S_Tarot.png",
+      "sourceWidth": 812,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "page-of-swords",
+      "sourceFile": "HS Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/page-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:HS_Tarot.png",
+      "sourceWidth": 819,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "knight-of-swords",
+      "sourceFile": "JS Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/knight-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:JS_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "queen-of-swords",
+      "sourceFile": "QS Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/queen-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:QS_Tarot.png",
+      "sourceWidth": 817,
+      "sourceHeight": 1537,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "king-of-swords",
+      "sourceFile": "KS Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/king-of-swords.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:KS_Tarot.png",
+      "sourceWidth": 817,
+      "sourceHeight": 1537,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ace-of-pentacles",
+      "sourceFile": "1P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/ace-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:1P_Tarot.png",
+      "sourceWidth": 805,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "two-of-pentacles",
+      "sourceFile": "2P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/two-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:2P_Tarot.png",
+      "sourceWidth": 809,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "three-of-pentacles",
+      "sourceFile": "3P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/three-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:3P_Tarot.png",
+      "sourceWidth": 812,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "four-of-pentacles",
+      "sourceFile": "4P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/four-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:4P_Tarot.png",
+      "sourceWidth": 811,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "five-of-pentacles",
+      "sourceFile": "5P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/five-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:5P_Tarot.png",
+      "sourceWidth": 808,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "six-of-pentacles",
+      "sourceFile": "6P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/six-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:6P_Tarot.png",
+      "sourceWidth": 810,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "seven-of-pentacles",
+      "sourceFile": "7P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/seven-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:7P_Tarot.png",
+      "sourceWidth": 808,
+      "sourceHeight": 1537,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "eight-of-pentacles",
+      "sourceFile": "8P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/eight-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:8P_Tarot.png",
+      "sourceWidth": 808,
+      "sourceHeight": 1537,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "nine-of-pentacles",
+      "sourceFile": "9P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/nine-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:9P_Tarot.png",
+      "sourceWidth": 809,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "ten-of-pentacles",
+      "sourceFile": "10P Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/ten-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:10P_Tarot.png",
+      "sourceWidth": 809,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "page-of-pentacles",
+      "sourceFile": "HP Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/page-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:HP_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "knight-of-pentacles",
+      "sourceFile": "JP Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/knight-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:JP_Tarot.png",
+      "sourceWidth": 810,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "queen-of-pentacles",
+      "sourceFile": "QP Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/queen-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:QP_Tarot.png",
+      "sourceWidth": 813,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "slug": "king-of-pentacles",
+      "sourceFile": "KP Tarot.png",
+      "path": "/images/decks/tarot-de-marseille/king-of-pentacles.webp",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:KP_Tarot.png",
+      "sourceWidth": 805,
+      "sourceHeight": 1536,
+      "license": "Public Domain Mark 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    }
+  ]
+}

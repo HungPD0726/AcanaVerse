@@ -3,7 +3,12 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
-import type { Locale, TarotCard } from "@/domain/tarot";
+import { getDeckCardImageSrc } from "@/data/decks";
+import type {
+  Locale,
+  TarotCard,
+  TarotDeckDefinition,
+} from "@/domain/tarot";
 
 interface FanningDeckCardProps {
   categoryTitle: string;
@@ -11,7 +16,7 @@ interface FanningDeckCardProps {
   cards: TarotCard[];
   locale: Locale;
   onSelectCard: (card: TarotCard) => void;
-  frontImageFilter?: string;
+  deck: TarotDeckDefinition;
   frameOverlayClass?: string;
 }
 
@@ -21,7 +26,7 @@ export function FanningDeckCard({
   cards,
   locale,
   onSelectCard,
-  frontImageFilter = "none",
+  deck,
   frameOverlayClass = "",
 }: FanningDeckCardProps) {
   const [isHovered, setIsHovered] = useState(false);
@@ -95,12 +100,11 @@ export function FanningDeckCard({
               className={`absolute h-48 w-32 cursor-pointer overflow-hidden rounded-xl border-2 border-black bg-surface shadow-[4px_4px_0px_0px_#000] sm:h-52 sm:w-34 ${frameOverlayClass}`}
             >
               <Image
-                src={card.image.src}
+                src={getDeckCardImageSrc(deck, card)}
                 alt={card.name[locale]}
                 fill
                 sizes="150px"
                 className="object-cover transition-transform duration-300 group-hover:brightness-105"
-                style={{ filter: frontImageFilter }}
               />
               <div className="absolute inset-x-0 bottom-0 border-t border-black/20 bg-surface/90 px-2 py-1 text-center font-editorial text-[0.68rem] font-bold text-ink backdrop-blur-sm line-clamp-1">
                 {card.name[locale]}

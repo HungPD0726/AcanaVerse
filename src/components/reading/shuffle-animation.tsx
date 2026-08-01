@@ -1,109 +1,112 @@
 "use client";
 
-import { motion } from "motion/react";
+import { ArrowRightIcon } from "@phosphor-icons/react";
+import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface ShuffleAnimationProps {
   cardBackSrc: string;
-  onReady: () => void;
+  onReady(): void;
   readyLabel: string;
   shufflingLabel: string;
+  hint: string;
 }
 
-/* 18 cards flying in random burst directions */
-const CARD_COUNT = 18;
-
-function randomBetween(a: number, b: number) {
-  return a + Math.random() * (b - a);
-}
-
-interface FlyCard {
-  id: number;
-  x: number;
-  y: number;
-  rotate: number;
-  duration: number;
-  delay: number;
-}
+const packetCards = Array.from({ length: 8 }, (_, index) => index);
 
 export function ShuffleAnimation({
   cardBackSrc,
   onReady,
   readyLabel,
   shufflingLabel,
+  hint,
 }: ShuffleAnimationProps) {
-  const [cards, setCards] = useState<FlyCard[]>([]);
+  const reduceMotion = useReducedMotion();
   const [settled, setSettled] = useState(false);
 
   useEffect(() => {
-    const generated: FlyCard[] = Array.from({ length: CARD_COUNT }, (_, i) => ({
-      id: i,
-      x: randomBetween(-320, 320),
-      y: randomBetween(-260, 260),
-      rotate: randomBetween(-180, 180),
-      duration: randomBetween(0.7, 1.2),
-      delay: randomBetween(0, 0.25),
-    }));
-    setCards(generated);
-
-    const t = setTimeout(() => setSettled(true), 1800);
-    return () => clearTimeout(t);
-  }, []);
+    const timer = window.setTimeout(
+      () => setSettled(true),
+      reduceMotion ? 200 : 1_650,
+    );
+    return () => window.clearTimeout(timer);
+  }, [reduceMotion]);
 
   return (
-    <div className="flex flex-col items-center gap-10">
-      {/* Explosion arena */}
-      <div className="relative flex h-64 w-full max-w-xl items-center justify-center sm:h-80">
-        {/* centre deck */}
-        <div className="relative z-10 h-48 w-32 overflow-hidden rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] sm:h-56 sm:w-36">
-          <Image src={cardBackSrc} alt="" fill sizes="150px" className="object-cover" priority />
-        </div>
-
-        {/* flying cards */}
-        {cards.map((card) => (
-          <motion.div
-            key={card.id}
-            className="pointer-events-none absolute h-28 w-18 overflow-hidden rounded-lg border border-black/40 shadow-lg sm:h-36 sm:w-22"
-            initial={{ x: 0, y: 0, rotate: 0, opacity: 1, scale: 1 }}
-            animate={
-              settled
-                ? { x: 0, y: 0, rotate: 0, opacity: 0, scale: 0.6 }
-                : { x: card.x, y: card.y, rotate: card.rotate, opacity: 0.85, scale: 0.85 }
-            }
-            transition={{
-              duration: card.duration,
-              delay: card.delay,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-          >
-            <Image src={cardBackSrc} alt="" fill sizes="90px" className="object-cover" />
-          </motion.div>
-        ))}
+    <section
+      className="mx-auto flex min-h-[34rem] max-w-3xl flex-col items-center justify-center text-center"
+      aria-labelledby="shuffle-title"
+    >
+      <div
+        className="relative h-64 w-full max-w-md"
+        aria-hidden
+      >
+        <div className="absolute left-1/2 top-1/2 h-56 w-36 -translate-x-1/2 -translate-y-1/2 rounded-[0.6rem] border border-line bg-soft" />
+        {packetCards.map((index) => {
+          const isLeft = index % 2 === 0;
+          const order = Math.floor(index / 2);
+          return (
+            <motion.div
+              key={index}
+              className="absolute left-1/2 top-1/2 h-48 w-32 overflow-hidden rounded-[0.5rem] border border-line bg-surface"
+              initial={{
+                x: isLeft ? -78 : -50,
+                y: -96 + order * 2,
+                rotate: isLeft ? -8 : 8,
+              }}
+              animate={
+                settled
+                  ? { x: -64, y: -102 + order, rotate: 0 }
+                  : {
+                      x: isLeft
+                        ? [-78, -96, -64]
+                        : [-50, -31, -64],
+                      y: [-96 + order * 2, -103, -102 + order],
+                      rotate: isLeft ? [-8, -10, 0] : [8, 10, 0],
+                    }
+              }
+              transition={{
+                duration: reduceMotion ? 0 : 0.9,
+                delay: reduceMotion ? 0 : order * 0.13,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <Image
+                src={cardBackSrc}
+                alt=""
+                fill
+                loading="eager"
+                sizes="128px"
+                className="object-cover"
+              />
+            </motion.div>
+          );
+        })}
       </div>
 
-      {/* Label */}
-      <motion.p
-        className="font-editorial text-2xl text-ink sm:text-3xl"
-        animate={{ opacity: [0.4, 1, 0.4] }}
-        transition={{ duration: 1.2, repeat: settled ? 0 : Infinity }}
+      <h2
+        id="shuffle-title"
+        className="font-editorial text-4xl font-medium text-ink sm:text-5xl"
       >
-        {settled ? "✨" : "🔀"} {settled ? readyLabel : shufflingLabel}
-      </motion.p>
+        {settled ? readyLabel : shufflingLabel}
+      </h2>
+      <p className="mt-3 max-w-md text-sm leading-6 text-muted">{hint}</p>
 
-      {/* Choose button - fades in when settled */}
       <motion.button
         type="button"
         onClick={onReady}
-        className="moonlight-button inline-flex min-h-14 items-center gap-3 rounded-full bg-black px-8 text-sm font-bold text-white"
-        initial={{ opacity: 0, y: 16 }}
-        animate={settled ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-        transition={{ duration: 0.5 }}
         disabled={!settled}
+        initial={{ opacity: 0, y: 8 }}
+        animate={settled ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+        className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-control bg-ink px-5 text-sm font-semibold text-canvas focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent disabled:pointer-events-none"
       >
-        <span className="text-lg">🃏</span>
         {readyLabel}
+        <ArrowRightIcon size={17} weight="bold" aria-hidden />
       </motion.button>
-    </div>
+      <span className="sr-only" role="status" aria-live="polite">
+        {settled ? readyLabel : shufflingLabel}
+      </span>
+    </section>
   );
 }

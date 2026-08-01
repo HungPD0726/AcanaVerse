@@ -40,14 +40,14 @@ describe("reading experience", () => {
     );
 
     const questionInput = screen.getByPlaceholderText(
-      "Type your question or scenario...",
+      "What needs to become clearer now?",
     );
     fireEvent.change(questionInput, {
       target: { value: "What should I notice today?" },
     });
     expect(questionInput).toHaveValue("What should I notice today?");
 
-    const proceedButton = screen.getByRole("button", { name: /proceed/i });
+    const proceedButton = screen.getByRole("button", { name: "Continue" });
     fireEvent.click(proceedButton);
 
     await act(async () => vi.runAllTicks());
@@ -59,7 +59,7 @@ describe("reading experience", () => {
 
     await act(async () => vi.advanceTimersByTimeAsync(2_000));
     const doneButton = screen.getByRole("button", {
-      name: /done/i,
+      name: "Spread the deck and choose",
     });
     fireEvent.click(doneButton);
     await act(async () => vi.advanceTimersByTimeAsync(350));

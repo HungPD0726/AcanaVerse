@@ -2,11 +2,13 @@
 
 import {
   ArrowCounterClockwiseIcon,
+  ArrowLeftIcon,
   ArrowRightIcon,
 } from "@phosphor-icons/react";
-import { motion, MotionConfig } from "motion/react";
+import { LayoutGroup, motion, MotionConfig } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
+import { CardFan } from "@/components/reading/card-fan";
 import { DeckSelector } from "@/components/reading/deck-selector";
 import { DeckStack } from "@/components/reading/deck-stack";
 import { ExportReadingCard } from "@/components/reading/export-reading-card";
@@ -15,13 +17,9 @@ import { QuestionPromptStep } from "@/components/reading/question-prompt-step";
 import { ShuffleAnimation } from "@/components/reading/shuffle-animation";
 import { SpreadSelector } from "@/components/reading/spread-selector";
 import { SpreadTableau } from "@/components/reading/spread-tableau";
-import { WaveFan } from "@/components/reading/wave-fan";
-import { MagicParticles } from "@/components/ui/magic-particles";
 import { tarotCards, tarotCardsById } from "@/data/cards";
-import { tarotDecksBySlug, defaultDeck } from "@/data/decks";
+import { defaultDeck, tarotDecksBySlug } from "@/data/decks";
 import { getSpread } from "@/data/spreads";
-import { audioEngine } from "@/lib/audio-engine";
-import { saveJournalEntry } from "@/lib/journal-storage";
 import type {
   Locale,
   ReadingPhase,
@@ -29,6 +27,7 @@ import type {
   SpreadDefinition,
 } from "@/domain/tarot";
 import { Link } from "@/i18n/navigation";
+import { audioEngine } from "@/lib/audio-engine";
 import {
   createDrawnCard,
   createReadingSession,
@@ -49,8 +48,7 @@ const phaseOrder: ReadingPhase[] = [
 ];
 
 function phaseProgress(phase: ReadingPhase) {
-  if (phase === "completed") return 4;
-  if (phase === "revealing") return 4;
+  if (phase === "completed" || phase === "revealing") return 4;
   if (phase === "laid-out") return 3;
   return Math.max(phaseOrder.indexOf(phase), 0);
 }
@@ -70,6 +68,8 @@ export function ReadingExperience({
   const [showRestoreNotice, setShowRestoreNotice] = useState(false);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [setupStep, setSetupStep] = useState<"prompt" | "deck">("prompt");
+  const phasePanelRef = useRef<HTMLDivElement>(null);
+  const hasMountedPhase = useRef(false);
 
   const activeDeck = tarotDecksBySlug.get(session.deckSlug) ?? defaultDeck;
   const spread = getSpread(session.spreadSlug) ?? initialSpread;
@@ -80,8 +80,10 @@ export function ReadingExperience({
   const revealedCount = session.drawnCards.filter(
     (drawnCard) => drawnCard.isRevealed,
   ).length;
-  const activeDrawnCard =
-    session.drawnCards[activeCardIndex] ?? session.drawnCards[0];
+  const nextRevealIndex = session.drawnCards.findIndex(
+    (drawnCard) => !drawnCard.isRevealed,
+  );
+  const activeDrawnCard = session.drawnCards[activeCardIndex];
   const activeCard = activeDrawnCard
     ? tarotCardsById.get(activeDrawnCard.cardId)
     : undefined;
@@ -93,7 +95,7 @@ export function ReadingExperience({
     queueMicrotask(() => {
       const restored = restoreSession(
         sessionStorage.getItem(SESSION_STORAGE_KEY),
-        spread.slug,
+        initialSpread.slug,
       );
       if (restored) {
         dispatch({ type: "RESET", session: restored });
@@ -101,7 +103,7 @@ export function ReadingExperience({
       }
       setStorageReady(true);
     });
-  }, [spread.slug]);
+  }, [initialSpread.slug]);
 
   useEffect(() => {
     if (!storageReady) return;
@@ -115,41 +117,65 @@ export function ReadingExperience({
   }, [locale, session.locale]);
 
   useEffect(() => {
-    if (session.phase === "completed") {
-      audioEngine.playSingingBowlSound();
-      saveJournalEntry({
-        question: session.question || "Khôn ngoan tĩnh lặng",
-        spreadSlug: session.spreadSlug,
-        deckSlug: session.deckSlug,
-        drawnCardIds: session.drawnCards.map((c) => c.cardId),
-      });
+    if (!hasMountedPhase.current) {
+      hasMountedPhase.current = true;
+      return;
     }
-  }, [session.phase, session.question, session.spreadSlug, session.deckSlug, session.drawnCards]);
+
+    const frame = window.requestAnimationFrame(() => {
+      phasePanelRef.current?.scrollIntoView?.({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+        block: "start",
+      });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [session.phase, setupStep]);
 
   const handleShuffle = () => {
     audioEngine.playShuffleSound();
-    const shuffledCardIds = prepareShuffle(tarotCards.map((card) => card.id));
-    dispatch({ type: "START_SHUFFLE", shuffledCardIds });
+    dispatch({
+      type: "START_SHUFFLE",
+      shuffledCardIds: prepareShuffle(tarotCards.map((card) => card.id)),
+    });
   };
 
   const handleSelect = (cardId: string) => {
     if (session.drawnCards.length >= spread.cardCount) return;
     audioEngine.playDropSound();
-    const drawnCard = createDrawnCard(
-      cardId,
-      spread,
-      session.drawnCards.length,
-    );
     dispatch({
       type: "SELECT_CARD",
-      drawnCard,
+      drawnCard: createDrawnCard(
+        cardId,
+        spread,
+        session.drawnCards.length,
+      ),
       cardCount: spread.cardCount,
     });
   };
 
+  const handleReveal = (index: number) => {
+    if (
+      session.phase !== "revealing" ||
+      index !== nextRevealIndex ||
+      index < 0
+    ) {
+      return;
+    }
+    setActiveCardIndex(index);
+    dispatch({ type: "REVEAL_NEXT" });
+    if (revealedCount + 1 === spread.cardCount) {
+      audioEngine.playSingingBowlSound();
+    }
+  };
+
   const handleNewReading = () => {
-    const nextSession = createReadingSession(spread, locale);
-    dispatch({ type: "RESET", session: nextSession });
+    dispatch({
+      type: "RESET",
+      session: createReadingSession(spread, locale),
+    });
+    setActiveCardIndex(0);
     setShowRestoreNotice(false);
     setSetupStep("prompt");
   };
@@ -163,16 +189,18 @@ export function ReadingExperience({
   ];
 
   return (
-    <MotionConfig transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}>
-      <div className="relative mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <MagicParticles active={session.phase === "completed" || session.phase === "revealing"} />
+    <MotionConfig
+      reducedMotion="user"
+      transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6 sm:py-10 lg:px-8">
         <header className="border-b border-line pb-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:text-ink"
+              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-accent"
             >
-              <ArrowCounterClockwiseIcon size={14} weight="bold" />
+              <ArrowLeftIcon size={14} weight="bold" aria-hidden />
               {common("backHome")}
             </Link>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
@@ -180,35 +208,25 @@ export function ReadingExperience({
             </p>
           </div>
 
-          <div className="mt-6 flex items-center justify-between gap-4">
-            <div>
-              <h1 className="font-editorial text-3xl text-ink sm:text-4xl">
-                {spread.name[locale]}
-              </h1>
-              <p className="mt-1 text-sm text-muted">
-                {spread.instruction[locale]}
-              </p>
-            </div>
-          </div>
-
-          <nav aria-label="Progress" className="mt-8">
-            <ol className="grid grid-cols-5 gap-2 text-center text-xs font-medium text-muted sm:gap-4">
+          <nav aria-label={t("progressLabel")} className="mt-7">
+            <ol className="grid grid-cols-5 gap-2 text-center text-[0.68rem] font-medium text-muted sm:gap-4 sm:text-xs">
               {stepLabels.map((label, index) => {
                 const isActive = index === progressIndex;
                 const isDone = index < progressIndex;
                 return (
                   <li
                     key={label}
-                    className={`border-t-2 pt-2 transition-colors ${
+                    aria-current={isActive ? "step" : undefined}
+                    className={`border-t pt-2 transition-colors ${
                       isActive
-                        ? "border-accent text-ink font-bold"
+                        ? "border-accent font-semibold text-ink"
                         : isDone
                           ? "border-ink text-muted"
                           : "border-line text-muted/60"
                     }`}
                   >
                     <span className="hidden sm:inline">
-                      {String(index + 1).padStart(2, "0")}.{" "}
+                      {String(index + 1).padStart(2, "0")} ·{" "}
                     </span>
                     {label}
                   </li>
@@ -221,228 +239,324 @@ export function ReadingExperience({
         {showRestoreNotice ? (
           <p
             role="status"
-            className="mt-6 rounded-control border border-line bg-soft px-4 py-3 text-xs text-muted"
+            className="mt-5 rounded-control border border-line bg-soft px-4 py-3 text-xs text-muted"
           >
             {t("restoreNotice")}
           </p>
         ) : null}
 
-        <motion.div
-          key={`${session.phase}-${setupStep}`}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10"
-        >
-          {/* STEP 1: Question Prompt (Screenshot 1 & 2) */}
-          {session.phase === "setup" && setupStep === "prompt" ? (
-            <QuestionPromptStep
-              initialQuestion={session.question}
-              locale={locale}
-              onProceed={(q) => {
-                dispatch({ type: "SET_QUESTION", question: q });
-                setSetupStep("deck");
-              }}
-              onSkip={() => setSetupStep("deck")}
-            />
-          ) : null}
-
-          {/* STEP 2: Deck Stack & Ready to Shuffle (Screenshot 3) */}
-          {session.phase === "setup" && setupStep === "deck" ? (
-            <div className="flex flex-col items-center justify-center text-center">
-              {/* Question Speech Bubble (Screenshot 3) */}
-              {session.question ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9, y: -10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  className="mb-8 rounded-2xl border-2 border-black bg-surface px-6 py-3 font-editorial text-lg font-medium text-ink shadow-[4px_4px_0px_0px_#000]"
-                >
-                  "{session.question}"
-                </motion.div>
-              ) : null}
-
-              {/* 3D Vertical Deck Stack */}
-              <DeckStack
-                cardBackSrc={activeDeck.cardBackSrc}
-                onShuffle={handleShuffle}
-                label={locale === "vi" ? "Sẵn Sàng Tráo Bài" : "Ready to shuffle"}
-                sublabel={locale === "vi" ? "Di chuột để cảm nhận năng lượng bài" : "Hover to feel the deck energy"}
+        <LayoutGroup id="reading-ritual">
+          <motion.div
+            ref={phasePanelRef}
+            key={`${session.phase}-${setupStep}`}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-8 scroll-mt-20"
+          >
+            {session.phase === "setup" && setupStep === "prompt" ? (
+              <QuestionPromptStep
+                initialQuestion={session.question}
+                onProceed={(question) => {
+                  dispatch({ type: "SET_QUESTION", question });
+                  setSetupStep("deck");
+                }}
+                onSkip={() => {
+                  dispatch({ type: "SET_QUESTION", question: "" });
+                  setSetupStep("deck");
+                }}
               />
+            ) : null}
 
-              {/* Deck & Spread Selectors Drawer/Accordion */}
-              <div className="mt-12 w-full max-w-2xl rounded-2xl border-2 border-black bg-surface p-6 shadow-[6px_6px_0px_0px_#000]">
-                <div className="grid gap-6 sm:grid-cols-2">
+            {session.phase === "setup" && setupStep === "deck" ? (
+              <section
+                className="mx-auto max-w-5xl py-3 sm:py-8"
+                aria-labelledby="ritual-options-title"
+              >
+                <div className="flex flex-col gap-5 border-b border-line pb-7 sm:flex-row sm:items-end sm:justify-between">
                   <div>
-                    <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">
-                      {t("chooseSpread")}
-                    </h3>
-                    <SpreadSelector
-                      selectedSpreadSlug={session.spreadSlug}
-                      onSelectSpread={(newSpread) =>
-                        dispatch({ type: "SET_SPREAD", spreadSlug: newSpread.slug })
-                      }
-                      locale={locale}
-                    />
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                      02 / {t("ritualOptionsEyebrow")}
+                    </p>
+                    <h2
+                      id="ritual-options-title"
+                      className="mt-3 font-editorial text-4xl font-medium text-ink sm:text-5xl"
+                    >
+                      {t("ritualOptionsTitle")}
+                    </h2>
                   </div>
-                  <div>
-                    <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">
+                  <button
+                    type="button"
+                    onClick={() => setSetupStep("prompt")}
+                    className="inline-flex items-center gap-2 self-start border-b border-muted pb-1 text-xs font-semibold text-muted transition-colors hover:border-ink hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-accent sm:self-auto"
+                  >
+                    <ArrowCounterClockwiseIcon size={14} aria-hidden />
+                    {t("editQuestion")}
+                  </button>
+                </div>
+
+                {session.question ? (
+                  <blockquote className="my-6 border-l border-accent pl-4 font-editorial text-lg leading-7 text-ink">
+                    “{session.question}”
+                  </blockquote>
+                ) : null}
+
+                <div className="mt-7">
+                  <div className="mb-4 flex items-end justify-between gap-5">
+                    <div>
+                      <h3 className="text-sm font-semibold text-ink">
+                        {t("chooseSpread")}
+                      </h3>
+                      <p className="mt-1 text-xs text-muted">
+                        {t("spreadsBody")}
+                      </p>
+                    </div>
+                  </div>
+                  <SpreadSelector
+                    selectedSpreadSlug={session.spreadSlug}
+                    onSelectSpread={(nextSpread) =>
+                      dispatch({
+                        type: "SET_SPREAD",
+                        spreadSlug: nextSpread.slug,
+                      })
+                    }
+                    locale={locale}
+                  />
+                </div>
+
+                <div className="mt-10 grid gap-6 border-t border-line pt-8 lg:grid-cols-[0.72fr_1.28fr]">
+                  <DeckStack
+                    cardBackSrc={activeDeck.cardBackSrc}
+                    onShuffle={handleShuffle}
+                    label={t("shuffle")}
+                    sublabel={t("shuffleDeckHint")}
+                  />
+                  <div className="lg:py-3">
+                    <h3 className="text-sm font-semibold text-ink">
                       {t("selectDeckTitle")}
                     </h3>
-                    <DeckSelector
-                      selectedDeckSlug={session.deckSlug}
-                      onSelectDeck={(deckSlug) =>
-                        dispatch({ type: "SET_DECK", deckSlug })
-                      }
-                      locale={locale}
-                    />
+                    <p className="mt-1 text-xs leading-5 text-muted">
+                      {t("selectDeckBody")}
+                    </p>
+                    <div className="mt-5">
+                      <DeckSelector
+                        selectedDeckSlug={session.deckSlug}
+                        onSelectDeck={(deckSlug) =>
+                          dispatch({ type: "SET_DECK", deckSlug })
+                        }
+                        locale={locale}
+                      />
+                    </div>
+                    <p className="mt-5 border-l border-line pl-4 text-xs leading-5 text-muted">
+                      {t("shuffleActionHint")}
+                    </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          ) : null}
+              </section>
+            ) : null}
 
-          {/* STEP 3: Vertical Cascading Shuffle (Screenshot 4) */}
-          {session.phase === "shuffling" ? (
-            <div className="flex min-h-[32rem] flex-col items-center justify-center text-center">
-              {session.question ? (
-                <div className="mb-6 rounded-xl border border-black/20 bg-surface/80 px-4 py-2 text-xs font-semibold text-muted">
-                  "{session.question}"
-                </div>
-              ) : null}
+            {session.phase === "shuffling" ? (
               <ShuffleAnimation
                 cardBackSrc={activeDeck.cardBackSrc}
                 onReady={() => dispatch({ type: "START_SELECTING" })}
                 shufflingLabel={t("shuffling")}
-                readyLabel={locale === "vi" ? "Tráo Bài Hoàn Tất (Done Shuffling)" : "Done shuffling"}
+                readyLabel={t("beginSelecting")}
+                hint={t("shufflingHint")}
               />
-            </div>
-          ) : null}
+            ) : null}
 
-          {/* STEP 4: Selecting Phase with Slots & Wave Arc Fan (Screenshot 5) */}
-          {session.phase === "selecting" ? (
-            <div>
-              {/* Question Banner */}
-              {session.question ? (
-                <div className="mb-6 text-center">
-                  <span className="rounded-full border border-black/20 bg-surface px-4 py-1.5 font-editorial text-sm text-ink shadow-sm">
-                    "{session.question}"
-                  </span>
+            {session.phase === "selecting" ? (
+              <section aria-labelledby="select-cards-title">
+                <div className="mx-auto max-w-2xl text-center">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                    {t("selectedProgress", {
+                      selected: session.drawnCards.length,
+                      total: spread.cardCount,
+                    })}
+                  </p>
+                  <h2
+                    id="select-cards-title"
+                    className="mt-3 font-editorial text-4xl font-medium text-ink sm:text-5xl"
+                  >
+                    {t("selectTitle", { count: spread.cardCount })}
+                  </h2>
+                  <p className="mt-3 text-sm leading-6 text-muted">
+                    {t("selectBody")}
+                  </p>
                 </div>
-              ) : null}
 
-              {/* Top: Spread Slots Placeholders (Screenshot 5) */}
-              <div className="rounded-[2rem] border-2 border-black bg-surface p-6 shadow-[6px_6px_0px_0px_#000]">
-                <h3 className="mb-4 text-center font-editorial text-2xl text-ink">
-                  {spread.name[locale]} ({session.drawnCards.length}/{spread.cardCount})
-                </h3>
-                <SpreadTableau
-                  spread={spread}
-                  drawnCards={session.drawnCards}
-                  locale={locale}
-                  allowReveal={false}
-                  onReveal={() => undefined}
-                  onDropCard={handleSelect}
-                  cardBackSrc={activeDeck.cardBackSrc}
-                />
-              </div>
+                <p className="sr-only" role="status" aria-live="polite">
+                  {t("selectedProgress", {
+                    selected: session.drawnCards.length,
+                    total: spread.cardCount,
+                  })}
+                </p>
 
-              {/* Bottom: Wave Arc Fan where cards lift vertically when hovered (Screenshot 5) */}
-              <div className="mt-8 rounded-[2rem] border-2 border-black bg-surface p-4 shadow-[6px_6px_0px_0px_#000]">
-                <WaveFan
-                  shuffledCardIds={session.shuffledCardIds}
-                  selectedCardIds={selectedIds}
-                  onSelect={handleSelect}
-                  cardBackSrc={activeDeck.cardBackSrc}
-                  sigma={3.2}
-                  maxLift={65}
-                />
-              </div>
-            </div>
-          ) : null}
+                <div className="mt-8 flex flex-col">
+                  <div className="order-2 mt-8 rounded-panel border border-line bg-surface p-4 sm:p-6 md:order-1 md:mt-0">
+                    <div className="mb-5 flex items-center justify-between gap-4 border-b border-line pb-4">
+                      <p className="font-editorial text-xl text-ink">
+                        {spread.name[locale]}
+                      </p>
+                      <p className="text-xs tabular-nums text-muted">
+                        {session.drawnCards.length} / {spread.cardCount}
+                      </p>
+                    </div>
+                    <SpreadTableau
+                      spread={spread}
+                      drawnCards={session.drawnCards}
+                      locale={locale}
+                      allowReveal={false}
+                      onReveal={() => undefined}
+                      cardBackSrc={activeDeck.cardBackSrc}
+                    />
+                  </div>
 
-          {/* STEP 5: Laid out Phase */}
-          {session.phase === "laid-out" ? (
-            <div>
-              <div className="text-center">
-                <h2 className="font-editorial text-4xl text-ink">
+                  <div className="order-1 md:order-2 md:mt-8">
+                    <CardFan
+                      shuffledCardIds={session.shuffledCardIds}
+                      selectedCardIds={selectedIds}
+                      onSelect={handleSelect}
+                      cardBackSrc={activeDeck.cardBackSrc}
+                    />
+                  </div>
+                </div>
+              </section>
+            ) : null}
+
+            {session.phase === "laid-out" ? (
+              <section className="py-4 text-center">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                  {t("phaseLayout")}
+                </p>
+                <h2 className="mt-3 font-editorial text-4xl font-medium text-ink sm:text-5xl">
                   {t("readyTitle")}
                 </h2>
                 <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted">
                   {t("readyBody")}
                 </p>
-              </div>
-              <div className="mt-8">
-                <SpreadTableau
-                  spread={spread}
-                  drawnCards={session.drawnCards}
-                  locale={locale}
-                  allowReveal={false}
-                  onReveal={() => undefined}
-                  cardBackSrc={activeDeck.cardBackSrc}
-                />
-              </div>
-              <div className="mt-8 flex justify-center">
+                <div className="mt-8 rounded-panel border border-line bg-surface p-4 sm:p-6">
+                  <SpreadTableau
+                    spread={spread}
+                    drawnCards={session.drawnCards}
+                    locale={locale}
+                    allowReveal={false}
+                    onReveal={() => undefined}
+                    cardBackSrc={activeDeck.cardBackSrc}
+                  />
+                </div>
                 <button
                   type="button"
-                  onClick={() => dispatch({ type: "START_REVEALING" })}
-                  className="moonlight-button inline-flex min-h-12 items-center gap-2 rounded-full border-2 border-black bg-black px-6 text-sm font-bold text-white shadow-[4px_4px_0px_0px_#000]"
+                  onClick={() => {
+                    setActiveCardIndex(0);
+                    dispatch({ type: "START_REVEALING" });
+                  }}
+                  className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-control bg-ink px-5 text-sm font-semibold text-canvas transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
                 >
                   {t("beginReveal")}
-                  <ArrowRightIcon size={18} weight="bold" aria-hidden />
+                  <ArrowRightIcon size={17} weight="bold" aria-hidden />
                 </button>
-              </div>
-            </div>
-          ) : null}
+              </section>
+            ) : null}
 
-          {/* STEP 6 & 7: Revealing & Completed Phase */}
-          {session.phase === "revealing" || session.phase === "completed" ? (
-            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-              <div className="flex flex-col gap-6">
-                <SpreadTableau
-                  spread={spread}
-                  drawnCards={session.drawnCards}
-                  locale={locale}
-                  allowReveal={session.phase === "revealing"}
-                  onReveal={() =>
-                    dispatch({
-                      type: "REVEAL_NEXT",
-                    })
-                  }
-                  cardBackSrc={activeDeck.cardBackSrc}
-                />
-
-                {session.phase === "completed" ? (
-                  <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
+            {session.phase === "revealing" ||
+            session.phase === "completed" ? (
+              <section>
+                <div className="mb-7 flex flex-col gap-4 border-b border-line pb-5 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <p
+                      className="text-xs font-semibold uppercase tracking-[0.18em] text-accent"
+                      role="status"
+                      aria-live="polite"
+                    >
+                      {t("revealedProgress", {
+                        revealed: revealedCount,
+                        total: spread.cardCount,
+                      })}
+                    </p>
+                    <h2 className="mt-2 font-editorial text-3xl font-medium text-ink sm:text-4xl">
+                      {session.phase === "completed"
+                        ? t("completedTitle")
+                        : t("revealTitle")}
+                    </h2>
+                  </div>
+                  {session.phase === "revealing" && nextRevealIndex >= 0 ? (
                     <button
                       type="button"
-                      onClick={handleNewReading}
-                      className="moonlight-button inline-flex min-h-12 items-center gap-2 rounded-full border-2 border-black bg-[#e2c6ff] px-6 text-sm font-bold text-black shadow-[4px_4px_0px_0px_#000]"
+                      onClick={() => handleReveal(nextRevealIndex)}
+                      className="inline-flex min-h-11 items-center gap-2 self-start rounded-control border border-line bg-surface px-4 text-xs font-semibold text-ink transition-colors hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-accent sm:self-auto"
                     >
-                      <ArrowCounterClockwiseIcon size={18} weight="bold" />
-                      {t("newReading")}
+                      {t("revealNext")}
+                      <ArrowRightIcon size={15} weight="bold" aria-hidden />
                     </button>
-                    <ExportReadingCard
+                  ) : null}
+                </div>
+
+                <div className="grid gap-8 xl:grid-cols-[1.18fr_0.82fr]">
+                  <div>
+                    <SpreadTableau
                       spread={spread}
                       drawnCards={session.drawnCards}
-                      question={session.question}
+                      locale={locale}
+                      allowReveal={session.phase === "revealing"}
+                      onReveal={handleReveal}
+                      onActivate={setActiveCardIndex}
+                      activeIndex={activeCardIndex}
+                      cardBackSrc={activeDeck.cardBackSrc}
                     />
-                  </div>
-                ) : null}
-              </div>
 
-              <div>
-                {activeDrawnCard && activeCard && activePosition ? (
-                  <InterpretationPanel
-                    drawnCard={activeDrawnCard}
-                    card={activeCard}
-                    position={activePosition}
-                    locale={locale}
-                  />
-                ) : null}
-              </div>
-            </div>
-          ) : null}
-        </motion.div>
+                    {session.phase === "completed" ? (
+                      <div className="mt-8 flex flex-wrap items-center justify-center gap-3 border-t border-line pt-7">
+                        <button
+                          type="button"
+                          onClick={handleNewReading}
+                          className="inline-flex min-h-11 items-center gap-2 rounded-control bg-ink px-4 text-xs font-semibold text-canvas focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-accent"
+                        >
+                          <ArrowCounterClockwiseIcon
+                            size={16}
+                            weight="bold"
+                            aria-hidden
+                          />
+                          {t("newReading")}
+                        </button>
+                        <ExportReadingCard
+                          spread={spread}
+                          drawnCards={session.drawnCards}
+                          question={session.question}
+                        />
+                      </div>
+                    ) : null}
+                  </div>
+
+                  <div className="xl:sticky xl:top-28 xl:self-start">
+                    {activeDrawnCard?.isRevealed &&
+                    activeCard &&
+                    activePosition ? (
+                      <InterpretationPanel
+                        drawnCard={activeDrawnCard}
+                        card={activeCard}
+                        position={activePosition}
+                        locale={locale}
+                        deck={activeDeck}
+                      />
+                    ) : (
+                      <aside className="rounded-panel border border-line bg-soft/35 p-6 sm:p-8">
+                        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+                          {t("meaning")}
+                        </p>
+                        <h3 className="mt-3 font-editorial text-3xl text-ink">
+                          {t("revealPanelTitle")}
+                        </h3>
+                        <p className="mt-3 text-sm leading-6 text-muted">
+                          {t("revealPanelBody")}
+                        </p>
+                      </aside>
+                    )}
+                  </div>
+                </div>
+              </section>
+            ) : null}
+          </motion.div>
+        </LayoutGroup>
       </div>
     </MotionConfig>
   );
